@@ -1,1 +1,486 @@
 /* Empty. Add your own CSS if you like */
+
+/*@import url('https://fonts.googleapis.com/css?family=Indie+Flower');*/
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+
+.custom
+{
+	background-color: #fb0 !important;
+}
+
+h1.title.title-left {
+    text-align: center !important;
+    font-size: 23px !important;
+
+}
+label.item.item-input {
+    width: 92%;
+  margin: auto;
+    margin-top: 35px;
+}
+textarea{
+	height: 70px;
+}
+button.done_btn {
+    display: block;
+    background-color: #fb0 !important;
+    width: 70%;
+    padding: 10px 0px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    letter-spacing: 4px;
+    margin: auto;
+    margin-top: 5%;
+}
+.title_box
+{
+    border-bottom: none;
+    
+}
+.desc_box
+{
+        border-top: none;
+        border-bottom: none;
+        margin-top: 0px !important;
+}
+
+
+input{
+  font-weight: normal;
+  font-family: 'Handlee', cursive !important;
+  font-size: 17px !important;
+
+  }
+.myForm
+{
+  margin-top: 16% !important;
+}
+
+.info_div {
+    background-color:#fb0;
+    max-width: 90%;
+    margin-top: 6% !important;
+    margin: auto;
+    padding: 12px;
+    border-radius: 5px;
+    color: black;
+    position: relative;
+/*        box-shadow: 8px 8px 18px #444;*/
+box-shadow: 8px 8px 25px #00061f;
+    font-family: 'Handlee', cursive;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.fontFamily{
+  font-family: 'Handlee', cursive;
+  font-weight: bolder;
+}
+.fontFamilyinput
+{
+   font-family: 'Handlee', cursive;
+  font-weight: bolder !important;
+      font-size: 18px !important;
+
+}
+.login_btn {
+    height: 26%;
+}
+p.ng-binding {
+    color: rgb(171, 24, 24);
+    margin-left: 10px;
+}
+.filter_box1 {
+    display: inline-block;
+    width: 40%;
+    margin: 10px 19px;
+}
+.list {
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 0;
+  margin-bottom: 20px;
+  display: inline;
+
+
+  }
+  select {
+    padding: 10px 2px;
+    color: gray;
+}
+/*input.ng-invalid.ng-dirty
+{
+    border:1px solid red;
+}*/
+
+.login_inputBox{
+    width: 90%;
+    padding: 20px 20px !important;
+    margin-top: 8%;
+    margin-left: 5%;
+    font-weight: bolder !important;
+    border-radius: 10px;
+
+}
+
+
+  .bg_clr
+  {
+    background-color: #F4F4F5;
+  }
+ .center {
+    margin: 0 auto;
+    margin-top: 10%;
+}
+form {
+  margin-top: 25% !important
+  }
+.error_msg
+{
+  letter-spacing: 1px;
+    margin-left: 6%;
+    color:red;
+}
+.logo {
+    display: inline-block;
+    background-color: #fb0;
+    border-radius: 60%;
+    padding: 26px;
+    margin-left: 26% !important;
+    box-shadow: 3px 4px 10px #254f5b;
+}
+.logo2 {
+    margin-top: 8%;
+    display: inline-block;
+    background-color: #fb0;
+    border-radius: 50%;
+    padding: 5%;
+    margin-left: 36% !important;
+    box-shadow: 3px 4px 7px #b2b2b2;
+}
+.h1_dec {
+    color: #000620;
+}
+.h1_dec2
+{
+    font-size: 16px;
+    color: white;
+}
+.placeholder-icon {
+    color: #1a3b44;
+    font-size: 25px;
+}
+.sign_in_div {
+    margin-left: 5%;
+    margin-top: 7%;
+}
+a.a_style {
+  color: #fb0;
+  text-decoration: none;
+  font-size: 18px;
+  }
+ .size_icon {
+    font-size: 16px;
+}
+span.title_style{
+    font-weight: bolder;
+    font-size: larger;
+}
+.modal {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.card {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 10%;
+  margin-top: 40%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  .center_text {
+  text-align: center;
+}
+h2.style{
+color: #FB0;
+    font-size: 16px;
+    line-height: 8px;
+    letter-spacing: 2px;
+}
+button.modal_btn {
+    border: none;
+    background: white;
+    color: blue;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.center.main_dash {
+    width: 90%;
+}
+.below_txtArea
+{
+  background-color: whitesmoke;
+    padding: 5px 0px;
+  margin: auto;
+  width: 92%;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.btn_noDis
+{
+  background:none;
+  border: none;
+}
+.show_off
+{
+  border-bottom: none;
+}
+form tooltip {
+  display:inherit;
+}
+.btn_noDis:hover
+{
+    border-color: red!important;
+}
+ion-icon
+{
+  font-size: 100;
+  margin: 5px;
+  font-size: 145%;
+  color: #a2a2a2;
+}
+button.btn_noDis.doneBtn {
+    float: right;
+    margin-right: 18px;
+    font-size: 16px;
+    color: #a2a2a2;
+    letter-spacing: 2px;
+}
+button.btn_noDisDes {
+    background: none;
+    border: none;
+}
+ion-icon.icon_desc
+{
+  color:#444;
+  margin:2px;
+}
+.wrap_icon {
+    float: right;
+    margin-top: -18px;
+}
+label.item.item-input1 {
+    width: 92%;
+    padding-top: 15px;
+    margin: auto;
+}
+.item-input1 input {
+    width: 100%;
+}
+.close-modal {
+    position: absolute;
+    right: 30px;
+    top: 22%;
+    font-size: 3.7em;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.element {
+  display: inline-flex;
+  align-items: center;
+}
+
+.inputs {
+ display: none;
+}
+.popup-body {
+    padding: 15px;
+    overflow: auto;
+    text-align: center;
+}
+button.button-positive {
+    border-color: transparent;
+    background-color: #fb0!important;
+    color: #444;
+}
+button.btn_noDis.okBtn {
+    float: right;
+    margin-right: 18px;
+    font-size: 18px;
+    color: #a2a2a2;
+    letter-spacing: 2px;
+    padding: 12px;
+}
+
+.user_img {
+    max-width: 50%;
+    max-height: 30%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: -55px;
+    left: 33%;
+}
+.wrapper_user_info {
+    margin-top: 33% !important;
+   width: 84%;
+    height: 65%;
+    padding: 60px 30px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 90px;
+    border-top-left-radius: 90px;
+    position: relative;
+    opacity: 0.9;
+}
+.popup {
+    border-radius: 5px !important;
+}
+.background_image {
+  background-image: url('../img/ch11.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.white
+{
+  color:white;
+  letter-spacing: 3px;
+}
+.noOfPost {
+    background-color: #31656a4f;
+    display: inline-block;
+    width: 46%;
+    margin-top: 25%;
+    padding: 16px;
+    border-radius: 50%;
+    text-align: center;
+}
+.category_style
+{
+      display: inline;
+}
+.searchbox
+{    width: 100% !important;
+    padding: 13px;
+    margin-top: 0% !important;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+.view_more
+{
+  font-style: italic;
+    float: right;
+        font-weight: bold;
+}
+
+.card.view_des {
+    margin: 3%;
+    margin-top: 33%;
+  }
+  .view_close {
+    top: 18% !important;
+    right: 0% !important;
+}
+
+.about_title {
+  font-weight: bold;
+    font-size: 29px;
+    color: black;
+       text-align: center;
+    padding-top: 16px;
+     font-family: 'Handlee', cursive;
+    letter-spacing: 2px;
+
+}
+.about {
+    color: black;
+font-size: 20px;
+    font-weight: bold;
+  
+    text-align: center;
+     font-family: 'Handlee', cursive;
+    letter-spacing: 1px;
+
+}
+
+.card.about_card {
+    width: 85%;
+    margin: 30px !important;
+    /*box-shadow: 10px 10px 5px #888888;*/
+        box-shadow: 10px 10px 28px #00031c;
+}
+
+
+}
+div#img_wrapper_notices img {
+    max-width: 100px;
+    vertical-align: middle;
+    margin: 2px;
+}
+.view_des  .item.item-text-wrap.ng-binding {
+    max-height: 300px;
+    overflow: auto;
+}
+.loader-box {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.div_pin {
+        position: absolute;
+    height: 11%;
+    width: 12%;
+    top: -16px;
+    right: 10px;
+    z-index: 5;
+  }
+  .notice_pin {
+    position: absolute;
+       height: 35px;
+    width: 35px;
+    top: -6px;
+    right: 0px;
+    z-index: 5;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+
+padding-top: 8px !important;
+}
+
+.scrollFull {
+    overflow: auto;
+    max-height: 90vh;
+}
+
+.item-complex .item-content,
+.item-radio .item-content {
+  position: relative;
+  z-index: 2;
+  padding: 26px 49px 16px 16px;
+  border: none;
+  color: white;
+  font-size: 19px;
+  background-color: #30534d;
+  }
+
+/*// Multiply by 2 to ensure the cursor always ends up at the end;
+// Opera sometimes sees a carriage return as 2 characters.
+var strLength = searchInput.val().length * 2;
+
+searchInput.focus();
+searchInput[0].setSelectionRange(strLength, strLength);*/
+

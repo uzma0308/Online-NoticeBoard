@@ -1,0 +1,32 @@
+<ion-pane>
+      <ion-content class="background_image">
+     <div class="center fontFamily">
+      <div class="logo"><h2 class="h1_dec fontFamily">NOTICE<br>BOARD <i class = "icon ion-edit placeholder-icon fontFamily"></i></h2></div>
+
+     <form name="myForm" class="center" novalidate>
+     
+  
+         <input placeholder="Email" type="email" ng-model="user.email" name="email" class="login_inputBox" ng-required="true"/>
+         <span class="error_msg" ng-show="flag && focusVar && (myForm.email.$dirty|| submitted )&& myForm.email.$error.required">* This feild is mandatory</span>
+        <span class="error_msg" ng-show="flag && focusVar && submitted && myForm.email.$error.email">* Enter valid email</span>
+         
+
+         <input placeholder = "Password" type="password" ng-model="user.password" name="password" class="login_inputBox" ng-required="true"/>
+
+         <span class="error_msg" ng-show="flag && focusVar && (myForm.password.$dirty || submitted )&& myForm.password.$error.required">* Enter password</span>
+
+         <span style="color:red;font-size: 14px;margin: 28px" ng-show="focusVar">{{errorMsg}}</span>
+
+          <button ion-button block class="done_btn login_btn"
+          ng-click="send_userData(myForm)" type="submit">LOGIN</button>
+          
+       </form>
+          <div class="sign_in_div">
+          <a class="a_style" ng-href="#/signup">New User? Sign Up</a>
+          </div>
+       
+
+     </div>
+      </ion-content>
+</ion-pane>
+                          

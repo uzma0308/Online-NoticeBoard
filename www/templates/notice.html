@@ -1,0 +1,159 @@
+<ion-view title="Notice">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header background_image">
+    <div class="scrollFull">
+    <div id="img_wrapper_notices">
+     </div>
+     <div class="writeDiv">
+       <label class = "item item-input show_off" ng-show="show">
+          <input type = "text" placeholder = "Type your note..." ng-focus="show=false" class="fontFamilyinput" />
+       </label>
+
+        <label class = "item item-input  title_box" ng-show="!show">
+          <input type = "text" ng-model="models.title" placeholder = "Title" class="fontFamilyinput"/>
+       </label>
+
+        <label class = "item item-input desc_box" ng-show="!show">
+          <textarea ng-model="models.data"  placeholder = "Type your note..." class="fontFamilyinput"></textarea>
+      </label>
+
+       <div class="below_txtArea">
+
+       <button class="btn_noDis" ion-button icon-only>
+            <ion-icon class="icon ion-edit"></ion-icon>
+       </button>
+
+       <button class="btn_noDis" ng-click="undoData()"  ion-button icon-only >
+            <ion-icon class="icon ion-ios-undo"></ion-icon>
+       </button>
+
+       <button class="btn_noDis" ion-button icon-only> 
+            <ion-icon class="icon ion-trash-b"></ion-icon>
+       </button>
+
+      <div class="element">
+        <button class="btn_noDis" ng-click="fileChanged()" ion-button icon-only>
+            <ion-icon class="icon ion-android-image"></ion-icon>
+       </button>
+       
+       <input type="file" id="fileUplaod" class="inputs" onchange="angular.element(this).scope().pictureSelected(this)" ng-model="myFile" name='file' >
+      </div>
+
+
+
+      <button ion-button class="btn_noDis doneBtn fontFamilyinput" ng-click="submit()">DONE</button>
+
+      
+      </div>
+      </div>
+ 
+    <div class="info_div" ng-repeat="data in arr">
+      <!-- <img src="../img/pin_red.png" id="imgUser"  class="notice_pin"> -->
+
+       <div>
+         <img src="img/pin_red.png" id="imgUser"  class="notice_pin">
+         <span class="title_style"> {{ data.title }}<br></span>
+
+         <br>{{ data.description }}
+         <br><br><span style="font-weight: bolder;color:#d10e00">{{data.date_of_creation | date:'dd-MM-yyyy'}}
+         <br>
+         <div class="category_style" ng-repeat="child in data.category_id track by $index">
+            {{child}}
+         </div></span>
+
+         <div class="wrap_icon">
+
+         <button class="btn_noDisDes" ng-click="edit_data()" ion-button icon-only>
+         <ion-icon class="icon ion-edit icon_desc"></ion-icon></button>
+
+         <button class="btn_noDisDes" ng-click="delete_data()" ion-button icon-only> 
+         <ion-icon class="icon ion-trash-b icon_desc"></ion-icon></button>
+
+        </div>
+
+       </div>
+    </div>
+
+
+
+    <div ng-show=loader_show class="loader-box">
+    <img class="loading_img" src="img/loader.gif">
+    </div>
+
+  </ion-content>
+</ion-view>
+
+<script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <div class="card">
+        <i class="icon ion-ios-close close-modal" ng-click="closeModal()"></i>
+        <div  style="background-color: #fb0"class="item item-divider">
+         <div class="center_text ">
+            <h2 style="font-size:20px;letter-spacing: 2px;" class="fontFamily">EDIT NOTICE</h2>
+         </div>
+        </div>
+        <div class="item item-text-wrap">
+        <label class = "item item-input1  title_box">
+          <input type = "text" ng-model="modals.titleInModal" placeholder = "Title" class="fontFamilyinput" />
+       </label>
+
+        <label class = "item item-input desc_box">
+          <textarea ng-model="modals.dataInModal"  placeholder = "Type your note..." class="fontFamilyinput" >
+            
+          </textarea>
+      </label>
+      
+      <div class="below_txtAreaModal">
+
+       <button class="btn_noDis" ion-button icon-only>
+            <ion-icon class="icon ion-edit"></ion-icon>
+       </button>
+
+       <button class="btn_noDis" ion-button icon-only ng-click="undoEditData()">
+            <ion-icon class="icon ion-ios-undo"></ion-icon>
+       </button>
+
+       <button class="btn_noDis" ion-button icon-only> 
+            <ion-icon class="icon ion-trash-b"></ion-icon>
+       </button>
+        
+       <button class="btn_noDis" ion-button icon-only>
+            <ion-icon class="icon ion-android-image"></ion-icon>
+       </button>
+
+      <button ion-button class="btn_noDis doneBtn fontFamily" ng-click="submitAgain()">DONE</button>
+
+      
+      </div>
+        
+          </div>
+        </div>
+      </ion-modal-view>
+    </script>
+
+    <script id="templates/modal1.html" type="text/ng-template">
+      <ion-modal-view>
+        <div class="card fontFamily">
+        <i class="icon ion-ios-close close-modal" ng-click="closeModal1()"></i>
+        <div  style="background-color: #fb0"class="item item-divider">
+         <div class="center_text ">
+            <h2 class="fontFamily" style="font-size:20px;letter-spacing:2px;">CHOOSE CATEGORY</h2>
+         </div>
+        </div>
+        <div class="item item-text-wrap">
+       <ul class = "list">
+            <ion-checkbox ng-repeat="item in categoryList" ng-model="selectedList[item.text]" 
+            class="checkbox-energized " ng-checked="item.checked">
+            {{ item.text }}
+              </ion-checkbox>
+                     <li>
+                       <button ion-button class="btn_noDis okBtn fontFamily" ng-click="insideSubmit()">OK</button>
+                     </li>
+            </ul>
+         
+          </div>
+        </div>
+      </ion-modal-view>
+    </script>

@@ -1,0 +1,62 @@
+<ion-pane>
+      <ion-content class="background_image">
+     <div class="center fontFamily">
+     <div class="logo"><h2 class="h1_dec fontFamily">NOTICE<br>BOARD <i class = "icon ion-edit placeholder-icon fontFamily" ></i></h2></div>
+
+     <form name="myForm" class="center myForm" novalidate>
+
+        <input placeholder="User Name" type="text" ng-model="user.name" name="name" id="name"class="login_inputBox" ng-required="true" />
+        <span class="error_msg" ng-show=" focusVar && (myForm.name.$dirty || submitted) && myForm.name.$error.required">* This feild is mandatory</span>
+
+         <input placeholder="Email" type="email" ng-model="user.email" name="email" id="email"class="login_inputBox" ng-required="true" />
+
+         <span class="error_msg" ng-show=" focusVar &&  (myForm.email.$dirty || submitted) && myForm.email.$error.required">* Enter your email address</span>
+         <span class="error_msg" ng-show="  focusVar && submitted && myForm.email.$dirty && myForm.email.$error.email">* Sorry, This doesn't look like a valid email</span>
+         
+
+         <input placeholder = "Password" type="password" ng-model="user.password" name="password" id="password" class="login_inputBox" ng-minlength="5" ng-maxlength="10" ng-required="true" />
+
+         <span class="error_msg" ng-show="  focusVar && (myForm.password.$dirty || submitted) && myForm.password.$error.required">* Enter password</span>
+
+         <span class="error_msg" ng-show="  focusVar && myForm.password.$dirty && myForm.password.$error.minlength">* Please use atleast 5 characters</span>
+
+         <span class="error_msg" ng-show="  focusVar && myForm.password.$dirty && myForm.password.$error.maxlength">* Password is too long</span>
+         
+   
+         <input  placeholder = "Confirm Password" name="confirmPassword" id="confirmPassword" type="password" ng-model="user.confirmPassword"  class="login_inputBox" ng-required="true" />
+
+         <span class="error_msg" ng-show=" focusVar &&  (myForm.confirmPassword.$dirty || submitted) && myForm.confirmPassword.$error.required">* Confirm password</span>
+
+         <span style="color:red;font-size: 14px;margin: 28px" ng-show=" focusVar ">{{errorMsg}}</span>
+ 
+   
+    <button ion-button block class="done_btn login_btn fontFamily" ng-click="send_userData(myForm)" type="submit" >SIGN UP</button>
+</form>
+
+     </div>
+
+     <div ng-show=loader_show class="loader-box">
+    <img class="loading_img" src="img/loader.gif">
+    </div>
+      </ion-content>
+</ion-pane>
+    <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <div class="card">
+        <div  style="background-color: #fb0"class="item item-divider">
+         <div class="center_text">
+          <h2 style="font-size:20px;letter-spacing: 2px;"  class="fontFamilyinput">SUCCESS</h2>
+       </div>
+        </div>
+        <div class="item item-text-wrap">
+        <div>
+          
+          <h1 style="font-size:23px !important;color:#FB0;letter-spacing:2px" class="center_text fontFamilyinput">You have signed up successfully<br><i class = "icon ion-checkmark fontFamily" ></i></h1>
+          <br>
+          <h2 class="style fontFamilyinput">Go to <button class="modal_btn fontFamilyinput" ng-click="goto_login()">Login</button> to continue</h2>
+          <br>
+          </div>
+          </div>
+        </div>
+      </ion-modal-view>
+    </script>

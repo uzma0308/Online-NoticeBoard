@@ -1,0 +1,36 @@
+<ion-view title="Profile">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header background_image">
+  <div class="wrapper_user_info fontFamilyinput">
+  <div style="text-align: center">
+   <div id="imgProfilePic_wrapper">
+     <!-- <img ng-src="{{imgLoader.srcy}}" id="img" class="img_wrapper"> -->
+         <img class="user_img" src="img/user_img2.png" id="imgProfilePic">
+     </div>
+ 
+  <h3 class="white" style="font-family: 'Handlee', cursive" contenteditable="true">{{name}}</h3>
+
+  <div class="element">
+        <button class="btn_noDis" ng-click="fileChanged()" ion-button icon-only>
+            <ion-icon class="icon ion-edit" style="color:white"></ion-icon>
+       </button>
+       
+       <input type="file" id="fileUplaodUser" onchange="angular.element(this).scope().pictureSelected(this)" ng-model="myFileUser" name='fileUser' class="inputs"> 
+       
+      </div>
+
+  <p class="white">Studying in G.B Pant Govt Engineerding College <i class = "icon ion-edit"></i></p>
+   </div>
+  <div class="noOfPost"><h3 class="white">10</h3><p class="white">No of posts</p></div>
+
+
+  <div class="noOfPost"><h3 class="white">20</h3><p class="white">No of Likes</p></div>
+  </div>
+
+  <div id="img_wrapper_notices">
+     </div>
+
+   </ion-content>
+</ion-view>

@@ -1,0 +1,80 @@
+<ion-view title="Notice Board">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header background_image">
+<div class="scrollFull">
+
+<!-- <ion-pane>
+      <ion-content class="bg_clr">
+   <div class="logo2">
+        <h2 class="h1_dec2">NOTICE<br>BOARD <i class = "icon ion-edit placeholder-icon size_icon"></i></h2>
+      </div> 
+
+      <div class = "list">
+       <label class = "item item-input" >
+          <input type="text" name="searchBox" placeholder="Search..." ng-model="searchInputBox">
+       </label>
+      </div> -->
+  <!-- 
+       <div class = "list">
+       <label class="filter_box1" >
+          <select ng-model="selectedSort"> 
+          	  <option value="title">Sort By Alphabatical Order</option>
+			        <option value="date_of_creation">Sort By Date</option>
+			  </select>
+       </label>
+       
+      <label class="filter_box1" >
+          <select> 
+          	  <option>Filter By Important</option>
+			        <option>Filter By Anything</option>
+
+			</select>
+       </label>
+       </div> -->
+	<!--  <div class="info_div" ng-repeat="data in arr|filter:searchInputBox| orderBy:selectedSort"> {{ data }}</div>
+	<p>{{selectedSort}}</p>-->
+		  
+ <!--  <div class="info_div" ng-repeat="data in arr |filter:searchInputBox"> {{ data.title }}<br><hr> {{data.description}}</div>
+  <p>{{selectedSort}}</p> -->
+  <div class = "list">
+       <label class = "item item-input searchbox" >
+          <input type="text" name="searchBox" placeholder="Search..." ng-model="searchInputBox" class="fontFamilyinput">
+       </label>
+
+        <div class="info_div" ng-repeat="data in arr |orderBy:selectedSort:false |filter:searchInputBox" >
+
+             <img src="img/pin_red.png" id="imgUser"  class="notice_pin">
+             
+            <span class="title_style">{{ data.title }}<br></span><br>{{data.brief_description}} <span <span style="font-weight: bolder;color:#d10e00"><br><br>{{data.user_name}}&nbsp&nbsp&nbsp&nbsp{{data.date_of_creation | date:'dd-MM-yyyy'}}
+         <br>
+         <div class="category_style" ng-repeat="child in data.category_id track by $index">
+            {{child}}
+         </div></span>
+         <button class="btn_noDisDes view_more fontFamily" ng-click="view_full()"> View More</button>
+         </div>
+      </div>
+      </div>
+  
+      </ion-content>
+</ion-views>
+
+<script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <div class="card view_des fontFamily">
+        <i class="icon ion-ios-close close-modal view_close" ng-click="closeModal()"></i>
+        <div  style="background-color: #fb0"class="item item-divider">
+         <div class="center_text">
+          <h2 style="font-size:20px;letter-spacing: 2px;" class="fontFamilyinput">Full Description</h2>
+       </div>
+        </div>
+        <div style="font-size:23px;color:#FB0;letter-spacing:2px;margin-top: 10px;" class="center_text"> {{title}}</div>
+        <br>
+        <div class="item item-text-wrap">
+        {{full_des}}
+          </div>
+      
+        </div>
+      </ion-modal-view>
+    </script>
